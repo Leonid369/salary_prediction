@@ -15,5 +15,6 @@ pickle_out.close()
 
 pickle_in = open("df.pickle", "rb")
 df1 = pickle.load(pickle_in)
+df1.to_csv('glassdoor_jobs_scrap.csv', index=False)
 df1 = pd.DataFrame(df1)
 print(df1.head())
